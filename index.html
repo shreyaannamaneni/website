@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Design Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="rectangle" class="rectangle"></div>
+    <div id="follow-cursor"></div>
+
+    <div class="container">
+        <header>
+            <img src="smalls art.png" class="smallpic" />
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html" class="active">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+
+            <div class="hero">
+                <p>
+                    Hi! <span class="highlight">I'M SHREYA</span>.
+                </p>
+                <img src="catanddog.png" class="pets" />
+            </div>
+            <div class="shapes"></div>
+         
+        </main>
+        
+        <footer>
+            <p>Get in touch: <a href="mailto:shreyannamaneni@gmail.com">shreyannamaneni@gmail.com</a></p>
+        </footer>
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                let rectangle = document.getElementById('rectangle');
+                rectangle.style.left = e.pageX + 'px';
+                rectangle.style.top = e.pageY + 'px';
+                
+            });
+        </script>
+        <script>
+            const followCursor = document.getElementById('follow-cursor');
+        
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX; // Gets the horizontal coordinate of the mouse
+                const mouseY = e.clientY; // Gets the vertical coordinate of the mouse
+                followCursor.style.display = 'block'; // Make the rectangle visible
+                followCursor.style.left = mouseX + 'px';
+                followCursor.style.top = mouseY + 'px';
+            });
+        </script>
+        
+    </body>
+    </html>
+    
+

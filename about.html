@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My UX and Graphic Design Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="rectangle" class="rectangle"></div>
+    <div id="follow-cursor"></div>
+    <div class = "container">
+    <header>
+        <img src="smalls art.png" class="smallpic" />
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    
+    <main>
+        <section class="about_me">
+            <div>
+            <h2>About Me</h2>
+            <p> Hey! I am senior at UCLA studying cognitive science with a specalization in computing and a minor in digital humanities. I will be using this website to host my final project as well as other design work I have done and conutinue to do. I also love animals so here is a video of my dog, Mowgli, frolicking in the fields</p></div>
+           <video class="moto" controls>
+            <source src="momo.MOV" />
+
+           </source>
+           </video>
+           
+            <!-- Add more content about yourself, your skills, experience, and vision -->
+        </section>
+    </main>
+    
+    <footer>
+            <p>Designed by Shreya Annamaneni <3 </p>
+    </footer>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            let rectangle = document.getElementById('rectangle');
+            rectangle.style.left = e.pageX + 'px';
+            rectangle.style.top = e.pageY + 'px';
+            
+        });
+    </script>
+    <script>
+        const followCursor = document.getElementById('follow-cursor');
+    
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX; // Gets the horizontal coordinate of the mouse
+            const mouseY = e.clientY; // Gets the vertical coordinate of the mouse
+            followCursor.style.display = 'block'; // Make the rectangle visible
+            followCursor.style.left = mouseX + 'px';
+            followCursor.style.top = mouseY + 'px';
+        });
+    </script>
+</body>
+</html>

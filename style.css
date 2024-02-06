@@ -1,0 +1,164 @@
+body, html {
+    margin: 8px 20px;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #CAD9D6;
+    color: #2F3C45;
+    height: 100%;
+
+}
+.pets{
+    width:405px;
+    height: 337px;
+    flex-direction: column;
+
+}
+.smallpic{
+    width: 62px;
+    height: 79px;
+}
+
+
+.container {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 2em; /* Adjust spacing as needed */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #2F3C45;
+    font-size: 1.2em;
+}
+
+.main {
+    text-align: center;
+    flex-grow: 1;
+}
+.hero{
+  display: flex;  
+  justify-content: space-between;
+    align-items: center;
+}
+.hero p {
+    font-size: 2em;
+    line-height: 1.5;
+    
+}
+
+.hero .highlight {
+    color: #63767A; /* Choose the color that matches your design */
+    font-weight: bold;
+  
+}
+.moto{
+    width: 50%;
+}
+
+.social-links {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #2F3C45;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+a:hover {
+    color: #63767A; /* Lighter brown for hover state */
+    text-decoration: underline;
+}
+
+#follow-cursor {
+    position: absolute;
+    width: 14px; /* Rectangle width */
+    height: 14px; /* Rectangle height */
+    background-color: #c28B7C; /* Rectangle color */
+    display: none; /* Hide until cursor moves */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    pointer-events: none; /* Ensures the cursor can interact with elements behind the rectangle */
+}
+
+/* Portfolio styles */
+#portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.portfolio-item {
+    border: 1px solid #EBDCD9;
+    padding: 1rem;
+    background: #EBDCD9; /* Light background for portfolio items */
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Shadow for lifted effect */
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item h2 {
+    font-size: 1.5em;
+    color: #2F3C45;
+}
+
+.portfolio-item p {
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+.portfolio-item .btn {
+    background-color: #c28B7C; /* Button color to match highlight */
+    color: #fff8f6;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust grid layout for smaller screens */
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+}

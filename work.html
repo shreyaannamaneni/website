@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="rectangle" class="rectangle"></div>
+    <div id="follow-cursor"></div>
+    <div class="container">
+        <header>
+            <img src="smalls art.png" class="smallpic" />
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html" class="active">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h1>My Work</h1>
+            <section id="portfolio">
+                <!-- Portfolio item 1 -->
+                <article class="portfolio-item">
+                    
+                    <h2>Project Title</h2>
+                    <p>Description of Final Project (work in progesss)</p>
+                    <a href="project-link.html" class="btn">View Project</a>
+                </article>
+                
+                <!-- Repeat for each piece of work -->
+                
+            </section>
+        </main>
+        
+        <footer>
+            <p>© Shreya Annamaneni. All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                let rectangle = document.getElementById('rectangle');
+                rectangle.style.left = e.pageX + 'px';
+                rectangle.style.top = e.pageY + 'px';
+                
+            });
+        </script>
+        <script>
+            const followCursor = document.getElementById('follow-cursor');
+        
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX; // Gets the horizontal coordinate of the mouse
+                const mouseY = e.clientY; // Gets the vertical coordinate of the mouse
+                followCursor.style.display = 'block'; // Make the rectangle visible
+                followCursor.style.left = mouseX + 'px';
+                followCursor.style.top = mouseY + 'px';
+            });
+        </script>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
